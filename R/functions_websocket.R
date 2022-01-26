@@ -142,6 +142,7 @@ trading_ws_md <- function(connection, destination, symbol, entries=list('BI', 'O
   })
 
   ws$onError(function(event) {
+    browser()
     message(glue("Something went wrong, here's the error:
                  {event$message}"))
   })
@@ -232,6 +233,7 @@ trading_ws_orders <- function(connection, destination, account = NA, only_active
   })
 
   ws$onError(function(event) {
+    browser()
     message(glue("Something went wrong, here's the error:
                  {event$message}"))
   })
